@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>MAPA DE ESTOCAGEM DE PRODUTOS CONTROLADOS - LOGIN</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f0f0f0; margin: 0; padding: 20px; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+        .login-container { background-color: #ffffff; padding: 30px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); width: 100%; max-width: 400px; text-align: center; }
+        h1 { font-size: 24px; color: #333; margin-bottom: 20px; }
+        .form-group { margin-bottom: 15px; text-align: left; }
+        label { font-size: 12px; color: #555; display: block; margin-bottom: 5px; font-weight: bold; }
+        input { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 7px; font-size: 14px; text-transform: uppercase; background-color: #f0f0f0; box-sizing: border-box; }
+        input:focus { outline: none; border-color: #555555; }
+        .form-button { background-color: #85B5D9; color: white; padding: 12px 20px; font-size: 16px; border: none; border-radius: 20px; cursor: pointer; width: 100%; margin-top: 10px; }
+        .form-button:hover { background-color: #0275C5; }
+        .logo-container { text-align: center; margin-bottom: 20px; }
+        .logo-container img { width: auto; height: auto; max-width: 100%; }
+    </style>
+</head>
+<body>
+    <div class="login-container" id="loginContainer">
+        <div class="logo-container">
+            <img src="imagem.png" alt="Logo">
+        </div>
+        <h1>MAPA DE ESTOCAGEM DE PRODUTOS CONTROLADOS</h1>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">LOGIN</label>
+                <input type="text" id="username" name="username" placeholder="DIGITE SEU LOGIN" required>
+            </div>
+            <div class="form-group">
+                <label for="password">SENHA</label>
+                <input type="password" id="password" name="password" placeholder="DIGITE SUA SENHA" required>
+            </div>
+            <button type="submit" class="form-button">Entrar</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            const username = document.getElementById("username").value.toUpperCase(); // Converte para maiúsculas
+            const password = document.getElementById("password").value;
+
+            // Logins e senhas fixos
+            const usuarios = {
+                "LAB1": { senha: "123", arquivo: "lab01.html" },
+                "LAB2": { senha: "123", arquivo: "lab02.html" },
+                "LAB3": { senha: "123", arquivo: "lab03.html" },
+                "LAB4": { senha: "123", arquivo: "lab04.html" },
+                "LAB5": { senha: "123", arquivo: "lab05.html" }
+            };
+
+            if (usuarios[username] && usuarios[username].senha === password) {
+                window.location.href = usuarios[username].arquivo;
+            } else {
+                alert("Login ou senha incorretos!");
+            }
+        });
+    </script>
+</body>
+</html>
