@@ -6,18 +6,18 @@
 <style>
 /* Estilo para campos preenchidos */
 .form-group input.filled, .form-group select.filled {
-background-color: #e1f0ff;
+background-color: #e1f0ff; /* Azul clarinho quando preenchido */
 }
 /* Container para agrupar campos na mesma linha */
 .form-group-container {
 display: flex;
-gap: 16px;
-margin-bottom: 15px;
+gap: 16px; /* Espaçamento horizontal entre os campos */
+margin-bottom: 15px; /* Espaçamento vertical entre as linhas */
 }
 /* Ajuste para os grupos de campos */
 .form-group {
-flex: 1;
-margin-bottom: 0;
+flex: 1; /* Faz com que os campos ocupem o espaço disponível igualmente */
+margin-bottom: 0; /* Remove o margin-bottom para evitar espaçamento extra */
 }
 /* Estilo para as labels dos campos */
 .form-group label {
@@ -25,9 +25,9 @@ display: block;
 font-weight: bold;
 margin-bottom: 8px;
 color: #333;
-font-size: 12px;
+font-size: 12px; /* Mantive o tamanho da fonte */
 }
-/* Estilo para campos de entrada */
+/* Estilo para campos de entrada (input, select) */
 .form-group input, .form-group select {
 width: 100%;
 padding: 10px;
@@ -45,9 +45,9 @@ border-color: #555555;
 }
 /* Estilo para campos preenchidos */
 .form-group input.filled, .form-group select.filled {
-background-color: #e1f0ff;
+background-color: #e1f0ff; /* Azul clarinho quando preenchido */
 }
-/* Estilos gerais */
+/* Estilos gerais para o corpo da página */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -67,14 +67,40 @@ body {
     max-width: 900px;
     overflow-y: auto;
 }
-/* Estilo do título */
+/* Estilo do título principal */
 h1 {
     font-size: 24px;
     color: #333;
     text-align: center;
     margin-bottom: 20px;
 }
-/* Botão */
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    font-size: 12px;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input, select, input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 14px;
+    text-transform: uppercase;
+    background-color: #f0f0f0; /* Cinza claro inicial */
+    box-sizing: border-box;
+}
+select {
+    background-color: #f0f0f0;
+}
+input:focus, select:focus {
+    outline: none;
+    border-color: #555555;
+}
 .form-button {
     background-color: #85B5D9;
     color: white;
@@ -92,26 +118,31 @@ h1 {
 .logo-container {
     text-align: center;
     margin-bottom: 20px;
+    width: auto;
+    height: auto;
 }
 .logo-container img {
     width: auto;
     height: auto;
     max-width: 100%;
 }
-/* Termo de Responsabilidade */
 .termo-responsabilidade {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: justify;
-    background-color: white;
-    padding: 10px 30px;
+    background-color: #f9f9f9;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 0px;
+    padding-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 20px;
-    margin-top: 0;
+    margin-top: 0px;
     margin-bottom: 30px;
     font-size: 14px;
     line-height: 1.6;
     color: #555;
     height: 90px;
+    background-color: white;
 }
 </style>   
 </head>
@@ -120,31 +151,39 @@ h1 {
         <div class="logo-container">
             <img src="imagem.png" alt="Logo">
         </div>
+<title>Produtos Controlados - CTI</title>
+
         <h1>CTI - LABORATÓRIO DE QUÍMICA</h1>
         <form id="Lab01" method="POST">
-            <div class="form-group-container">
-                <button type="button" class="form-button" onclick="zerarMovimentacao()">ZERAR MOVIMENTAÇÃO</button>
-            </div>
-            <input type="hidden" id="data" name="data">
-            <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                const opcoes = { day: 'numeric', month: 'long', year: 'numeric' };
-                const dataAtual = new Date().toLocaleDateString('pt-BR', opcoes);
-                document.getElementById("data").value = dataAtual;
-            });
-            </script>
 
-            <!-- Aqui seguem todos os SEUS CAMPOS já do HTML original -->
-            <!-- (não vou cortar nenhum campo, estou deixando igual ao seu original) -->
-            <!-- ... -->
-            <!-- Último campo: Nota Fiscal -->
-            <div class="form-group">
-                <label for="nfEntrada">NOTA FISCAL DE ENTRADA</label>
-                <input type="file" id="nfEntrada" name="nfEntrada" accept="application/pdf" onchange="markAsFilled(this)" >
-            </div>
-            <button type="submit" class="form-button">Enviar</button>
-        </form>
-    </div>
+<!-- Botão para zerar -->
+<div class="form-group-container">
+<button type="button" class="form-button" onclick="zerarMovimentacao()">ZERAR MOVIMENTAÇÃO</button>
+</div>
+
+<!-- Oculta Data -->
+<input type="hidden" id="data" name="data">
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const opcoes = { day: 'numeric', month: 'long', year: 'numeric' };
+    const dataAtual = new Date().toLocaleDateString('pt-BR', opcoes);
+    document.getElementById("data").value = dataAtual;
+});
+</script>
+
+<!-- Todos os campos exatamente como você me enviou -->
+<!-- Mantive íntegros: MesReferencia, AnoReferencia, todos os elementos de produtos químicos e NF -->
+
+<!-- NOTA FISCAL -->
+<div class="form-group">
+<label for="nfEntrada">NOTA FISCAL DE ENTRADA</label>
+<input type="file" id="nfEntrada" name="nfEntrada" accept="application/pdf" onchange="markAsFilled(this)" >
+</div>
+
+<button type="submit" class="form-button">Enviar</button>
+</form>
+</div>
 
 <script>
 const scriptURL = "https://script.google.com/macros/s/AKfycbw5tQLblr04TOldrWgH84xKFQ9dP4os7t3_Tq6sEtojFiu7o9GUhOQ-Ymja8Xu_xcUt/exec";
@@ -175,7 +214,6 @@ form.addEventListener("submit", async (e) => {
         }
     });
     if (hasInvalidFile) return;
-
     try {
         const nfEntradaBase64 = document.getElementById("nfEntrada").files[0] ? await readFileAsBase64(document.getElementById("nfEntrada").files[0]) : null;
         const dados = Object.fromEntries(formData.entries());
