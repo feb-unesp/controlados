@@ -3,50 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   
+   
 <style>
-/* Estilo para campos preenchidos */
-.form-group input.filled, .form-group select.filled {
-background-color: #e1f0ff; /* Azul clarinho quando preenchido */
-}
-/* Container para agrupar campos na mesma linha */
-.form-group-container {
-display: flex;
-gap: 16px; /* Espaçamento horizontal entre os campos */
-margin-bottom: 15px; /* Espaçamento vertical entre as linhas */
-}
-/* Ajuste para os grupos de campos */
-.form-group {
-flex: 1; /* Faz com que os campos ocupem o espaço disponível igualmente */
-margin-bottom: 0; /* Remove o margin-bottom para evitar espaçamento extra */
-}
-/* Estilo para as labels dos campos */
-.form-group label {
-display: block;
-font-weight: bold;
-margin-bottom: 8px;
-color: #333;
-font-size: 12px; /* Mantive o tamanho da fonte */
-}
-/* Estilo para campos de entrada (input, select) */
-.form-group input, .form-group select {
-width: 100%;
-padding: 10px;
-border: 1px solid #ccc;
-border-radius: 7px;
-font-size: 14px;
-text-transform: uppercase;
-background-color: #f0f0f0;
-box-sizing: border-box;
-}
-/* Estilo para campos em foco */
-.form-group input:focus, .form-group select:focus {
-outline: none;
-border-color: #555555;
-}
-/* Estilo para campos preenchidos */
-.form-group input.filled, .form-group select.filled {
-background-color: #e1f0ff; /* Azul clarinho quando preenchido */
-}
+
+
+	/* Estilo para campos preenchidos */
+	.form-group input.filled, .form-group select.filled {
+		background-color: #e1f0ff; /* Azul clarinho quando preenchido */
+	}
+
+
+	/* Container para agrupar campos na mesma linha */
+	.form-group-container {
+		display: flex;
+		gap: 16px; /* Espaçamento horizontal entre os campos */
+		margin-bottom: 15px; /* Espaçamento vertical entre as linhas */
+	}
+
+	/* Ajuste para os grupos de campos */
+	.form-group {
+		flex: 1; /* Faz com que os campos ocupem o espaço disponível igualmente */
+		margin-bottom: 0; /* Remove o margin-bottom para evitar espaçamento extra */
+	}
+
+	/* Estilo para as labels dos campos */
+	.form-group label {
+		display: block;
+		font-weight: bold;
+		margin-bottom: 8px;
+		color: #333;
+		font-size: 12px; /* Mantive o tamanho da fonte */
+	}
+
+	/* Estilo para campos de entrada (input, select) */
+	.form-group input, .form-group select {
+		width: 100%;
+		padding: 10px;
+		border: 1px solid #ccc;
+		border-radius: 7px;
+		font-size: 14px;
+		text-transform: uppercase;
+		background-color: #f0f0f0;
+		box-sizing: border-box;
+	}
+
+	/* Estilo para campos em foco */
+	.form-group input:focus, .form-group select:focus {
+		outline: none;
+		border-color: #555555;
+	}
+
+	/* Estilo para campos preenchidos */
+	.form-group input.filled, .form-group select.filled {
+		background-color: #e1f0ff; /* Azul clarinho quando preenchido */
+	}
+
+
+
+
+
     /* Estilos gerais para o corpo da página */
     body {
         font-family: Arial, sans-serif;
@@ -57,6 +74,7 @@ background-color: #e1f0ff; /* Azul clarinho quando preenchido */
         justify-content: center;
         align-items: center;
     }
+
     /* Estilo do container do formulário */
     .form-container {
         background-color: #ffffff;
@@ -67,6 +85,7 @@ background-color: #e1f0ff; /* Azul clarinho quando preenchido */
         max-width: 900px;
         overflow-y: auto;
     }
+
     /* Estilo do título principal */
     h1 {
         font-size: 24px;
@@ -74,10 +93,12 @@ background-color: #e1f0ff; /* Azul clarinho quando preenchido */
         text-align: center;
         margin-bottom: 20px;
     }
+
     /* Estilo para grupos de campos do formulário */
     .form-group {
         margin-bottom: 15px;
     }
+
     /* Estilo para as labels dos campos */
     label {
         font-size: 12px;
@@ -86,6 +107,7 @@ background-color: #e1f0ff; /* Azul clarinho quando preenchido */
         margin-bottom: 5px;
         font-weight: bold;
     }
+
     /* Estilo para campos de entrada (input, select e file) */
     input, select, input[type="file"] {
         width: 100%;
@@ -97,15 +119,18 @@ background-color: #e1f0ff; /* Azul clarinho quando preenchido */
         background-color: #f0f0f0; /* Cinza claro inicial */
         box-sizing: border-box;
     }
+
     /* Estilo específico para campos de seleção (select) */
     select {
         background-color: #f0f0f0; /* Cinza claro inicial */
     }
+
     /* Estilo para campos em foco (quando selecionados) */
     input:focus, select:focus {
         outline: none;
         border-color: #555555;
     }
+
     /* Estilo para o botão do formulário */
     .form-button {
         background-color: #85B5D9;
@@ -118,10 +143,12 @@ background-color: #e1f0ff; /* Azul clarinho quando preenchido */
         width: 100%;
         margin-top: 10px;
     }
+
     /* Estilo para o botão quando o mouse passa por cima */
     .form-button:hover {
         background-color: #0275C5;
     }
+
     /* Estilo para o container da logo */
     .logo-container {
         text-align: center;
@@ -129,17 +156,22 @@ background-color: #e1f0ff; /* Azul clarinho quando preenchido */
         width: auto;
         height: auto;
     }
+
     /* Estilo para a imagem da logo */
     .logo-container img {
         width: auto;
         height: auto;
         max-width: 100%;
     }
+
     /* Estilo para campos preenchidos */
     .form-group input.filled, .form-group select.filled {
         background-color: #e1f0ff; /* Azul clarinho quando preenchido */
     }
-/* Estilo para o container do Termo de Responsabilidade */
+	
+	
+	
+	/* Estilo para o container do Termo de Responsabilidade */
     .termo-responsabilidade {
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
         text-align: justify; /* Alinha o texto justificado */
@@ -147,8 +179,8 @@ background-color: #e1f0ff; /* Azul clarinho quando preenchido */
         padding-left: 30px; /* Espaçamento interno à esquerda */
         padding-right: 30px; /* Espaçamento interno à direita */
         padding-top: 0px; /* Espaçamento interno acima */
-        padding-bottom: 10px; /* Espaçamento interno abaixo */
-border: 1px solid #ccc; /* Borda cinza */
+        padding-bottom: 10px; /* Espaçamento interno abaixo */		
+		border: 1px solid #ccc; /* Borda cinza */
         border-radius: 20px; /* Bordas arredondadas */
         margin-top: 0px; /* Reduzi a margem superior */
         margin-bottom: 30px; /* Reduzi a margem inferior */
@@ -156,16 +188,26 @@ border: 1px solid #ccc; /* Borda cinza */
         line-height: 1.6; /* Espaçamento entre as linhas */
         color: #555; /* Cor do texto */
         height: 90px; /* Altura fixa da caixa */
-    font-size: 14px; /* Tamanho da fonte */
+	    font-size: 14px; /* Tamanho da fonte */
         background-color: white; /* Cor de fundo */
     }
+	
+	
+	
+	
+	
 </style>   
+   
+   
 </head>
 <body>
     <div class="form-container">
         <div class="logo-container">
             <img src="imagem.png" alt="Logo">
         </div>
+
+
+
 <title>Produtos Controlados - CTI</title>
 <style>
     /* Estilo para o título principal */
@@ -174,10 +216,13 @@ border: 1px solid #ccc; /* Borda cinza */
         color: #333; /* Cor do texto */
         margin-bottom: 10px; /* Espaçamento abaixo do título */
     }
+
+
     /* Estilo para grupos de campos do formulário */
     .form-group {
         margin-bottom: 14px; /* Espaçamento entre os grupos */
     }
+
     /* Estilo para as labels dos campos */
     .form-group label {
         display: block; /* Faz a label ocupar a linha inteira */
@@ -185,6 +230,7 @@ border: 1px solid #ccc; /* Borda cinza */
         margin-bottom: 8px; /* Espaçamento abaixo da label */
         color: #333; /* Cor do texto */
     }
+
     /* Estilo para campos de seleção (select) */
     .form-group select {
         width: 100%; /* Largura total */
@@ -193,14 +239,16 @@ border: 1px solid #ccc; /* Borda cinza */
         border: 1px solid #ccc; /* Borda cinza */
         font-size: 14px; /* Tamanho da fonte */
         background-color: #f0f0f0; /* Cor de fundo */
-color: #333; /* Cor do texto */
+		color: #333; /* Cor do texto */
     }
+
     /* Estilo para campos de seleção quando estão em foco */
     .form-group select:focus {
         border-color: #66afe9; /* Muda a cor da borda para azul */
         outline: none; /* Remove o contorno padrão */
         box-shadow: 0 0 5px rgba(102, 175, 233, 0.5); /* Adiciona uma sombra suave */
     }
+
     /* Estilo para o botão */
     button {
         width: 100%; /* Largura total */
@@ -212,269 +260,316 @@ color: #333; /* Cor do texto */
         font-size: 16px; /* Tamanho da fonte */
         cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
     }
+
     /* Estilo para o botão quando o mouse passa por cima */
     button:hover {
         background-color: #4cae4c; /* Muda a cor de fundo para um verde mais escuro */
     }
+	
+	
+	
+	
+	
 </style>
     </style>
 </head>
 <body>
-    <div class="container">
-<div class="container">
+    <div class="container"> 
+		<div class="container"> 
+ 
         <h1>CTI - LABORATÓRIO DE QUÍMICA</h1>
         <form id="Lab01" method="POST">
-<!-- Botão para zerar movimentação -->
-<div class="form-group-container">
-<button type="button" class="form-button" onclick="zerarMovimentacao()">ZERAR MOVIMENTAÇÃO</button>
-</div>
-         <!-- DATA DO LANÇAMENTO -->
-<input type="hidden" id="data" name="data">
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-const opcoes = { day: 'numeric', month: 'long', year: 'numeric' };
-const dataAtual = new Date().toLocaleDateString('pt-BR', opcoes);
-document.getElementById("data").value = dataAtual;
-});
-</script>
-<!-- MÊS E ANO DE REFERÊNCIA -->
-<div class="termo-responsabilidade"></p></p></p>
-<div class="form-group-container">
-<!-- Campo para selecionar o mês -->
-<div class="form-group">
-<label for="mesReferencia">MÊS DE REFERÊNCIA</label>
-<select id="mesReferencia" name="mesReferencia" required onchange="markAsFilled(this)">
-<option value="">SELECIONE O MÊS DE REFERÊNCIA</option>
-<option value="JANEIRO">JANEIRO</option>
-<option value="FEVEREIRO">FEVEREIRO</option>
-<option value="MARÇO">MARÇO</option>
-<option value="ABRIL">ABRIL</option>
-<option value="MAIO">MAIO</option>
-<option value="JUNHO">JUNHO</option>
-<option value="JULHO">JULHO</option>
-<option value="AGOSTO">AGOSTO</option>
-<option value="SETEMBRO">SETEMBRO</option>
-<option value="OUTUBRO">OUTUBRO</option>
-<option value="NOVEMBRO">NOVEMBRO</option>
-<option value="DEZEMBRO">DEZEMBRO</option>
-</select>
-</div>
-<!-- Campo para selecionar o ano -->
-<div class="form-group">
-<label for="anoReferencia">ANO DE REFERÊNCIA</label>
-<select id="anoReferencia" name="anoReferencia" required onchange="markAsFilled(this)">
-<option value="">SELECIONE O ANO DE REFERÊNCIA</option>
-<option value="2025">2025</option>
-<option value="2026">2026</option>
-</select>
-</div>
-</div>
-</div>
-<!-- ACETONA -->
-<div class="termo-responsabilidade"></p></p></p>
-<div class="form-group-container">
-<div class="form-group">
-<label for="acetonaEntrada">ACETONA ENTRADA</label>
-<input type="text" id="acetonaEntrada" name="acetonaEntrada" placeholder="VALOR DE ENTRADA"
-   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
-</div>
-<div class="form-group">
-<label for="acetonaConsumo">ACETONA CONSUMO</label>
-<input type="text" id="acetonaConsumo" name="acetonaConsumo" placeholder="VALOR DE CONSUMO"
-   oninput="validateNumber(this); markAsFilled(this)" required autocomplete="off">
-</div>
-<div class="form-group">
-<label for="acetonaNf">NOTA FISCAL DE ENTRADA</label>
-<input type="text" id="acetonaNf" name="acetonaNf" placeholder="NÚMERO DA NF DE ENTRADA"
-   oninput="validateNumber(this); markAsFilled(this)"  autocomplete="off">
-</div>
-</div>
-</p>
-</div>
-<!-- Campos do formulário -->
-<input type="hidden" id="data" name="data">
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-const opcoes = { day: 'numeric', month: 'long', year: 'numeric' };
-const dataAtual = new Date().toLocaleDateString('pt-BR', opcoes);
-document.getElementById("data").value = dataAtual;
-});
-</script>
-<!-- ÁCIDO ACÉTICO -->
-        <div class="termo-responsabilidade">
-</p></p></p>
-<div class="form-group-container">
-<div class="form-group">
-<label for="acidoAceticoEntrada">ÁCIDO ACÉTICO ENTRADA</label>
-<input type="text" id="acidoAceticoEntrada" name="acidoAceticoEntrada" placeholder="VALOR DE ENTRADA"
-   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
-</div>
-<div class="form-group">
-<label for="acidoAceticoConsumo">ÁCIDO ACÉTICO CONSUMO</label>
-<input type="text" id="acidoAceticoConsumo" name="acidoAceticoConsumo" placeholder="VALOR DE CONSUMO"
-   oninput="validateNumber(this); markAsFilled(this)" required autocomplete="off">
-</div>
-<div class="form-group">
-<label for="acidoAceticoNf">NOTA FISCAL DE ENTRADA</label>
-<input type="text" id="acidoAceticoNf" name="acidoAceticoNf" placeholder="NÚMERO DA NF DE ENTRADA"
-   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
-</div>
-</div>
-</div>
-<!-- ÁCIDO CLORÍDRICO -->
-<div class="termo-responsabilidade"></p></p></p>
-<div class="form-group-container">
-<div class="form-group">
-<label for="acidoCloridricoEntrada">ÁCIDO CLORÍDRICO ENTRADA</label>
-<input type="text" id="acidoCloridricoEntrada" name="acidoCloridricoEntrada" placeholder="VALOR DE ENTRADA"
-   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
-</div>
-<div class="form-group">
-<label for="acidoCloridricoConsumo">ÁCIDO CLORÍDRICO CONSUMO</label>
-<input type="text" id="acidoCloridricoConsumo" name="acidoCloridricoConsumo" placeholder="VALOR DE CONSUMO"
-   oninput="validateNumber(this); markAsFilled(this)" required autocomplete="off">
-</div>
-<div class="form-group">
-<label for="acidoCloridricoNf">NOTA FISCAL DE ENTRADA</label>
-<input type="text" id="acidoCloridricoNf" name="acidoCloridricoNf" placeholder="NÚMERO DA NF DE ENTRADA"
-   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
-</div>
-</div>
-</div>
-<!-- ÁCIDO SULFÚRICO -->
-<div class="termo-responsabilidade"></p></p></p>
-<div class="form-group-container">
-<div class="form-group">
-<label for="acidoSulfuricoEntrada">ÁCIDO SULFÚRICO ENTRADA</label>
-<input type="text" id="acidoSulfuricoEntrada" name="acidoSulfuricoEntrada" placeholder="VALOR DE ENTRADA"
-   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
-</div>
-<div class="form-group">
-<label for="acidoSulfuricoConsumo">ÁCIDO SULFÚRICO CONSUMO</label>
-<input type="text" id="acidoSulfuricoConsumo" name="acidoSulfuricoConsumo" placeholder="VALOR DE CONSUMO"
-   oninput="validateNumber(this); markAsFilled(this)" required autocomplete="off">
-</div>
-<div class="form-group">
-<label for="acidoSulfuricoNf">NOTA FISCAL DE ENTRADA</label>
-<input type="text" id="acidoSulfuricoNf" name="acidoSulfuricoNf" placeholder="NÚMERO DA NF DE ENTRADA"
-   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
-</div>
-</div></div>
-<!-- CLORETO DE AMÔNIO -->
-<div class="termo-responsabilidade"></p></p></p>
-<div class="form-group-container">
-<div class="form-group">
-<label for="cloretoAmonioEntrada">CLORETO DE AMÔNIO ENTRADA</label>
-<input type="text" id="cloretoAmonioEntrada" name="cloretoAmonioEntrada" placeholder="VALOR DE ENTRADA"
-   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
-</div>
-<div class="form-group">
-<label for="cloretoAmonioConsumo">CLORETO DE AMÔNIO CONSUMO</label>
-<input type="text" id="cloretoAmonioConsumo" name="cloretoAmonioConsumo" placeholder="VALOR DE CONSUMO"
-   oninput="validateNumber(this); markAsFilled(this)" required autocomplete="off">
-</div>
-<div class="form-group">
-<label for="cloretoAmmonioNf">NOTA FISCAL DE ENTRADA</label>
-<input type="text" id="cloretoAmonioNf" name="cloretoAmonioNf" placeholder="NÚMERO DA NF DE ENTRADA"
-   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
-</div>
-</div></div>
-<!-- CROMATO DE POTÁSSIO -->
-<div class="termo-responsabilidade"></p></p></p>
-<div class="form-group-container">
-<div class="form-group">
-<label for="cromatoPotassioEntrada">CROMATO DE POTÁSSIO ENTRADA</label>
-<input type="text" id="cromatoPotassioEntrada" name="cromatoPotassioEntrada" placeholder="VALOR DE ENTRADA"
-   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
-</div>
-<div class="form-group">
-<label for="cromatoPotassioConsumo">CROMATO DE POTÁSSIO CONSUMO</label>
-<input type="text" id="cromatoPotassioConsumo" name="cromatoPotassioConsumo" placeholder="VALOR DE CONSUMO"
-   oninput="validateNumber(this); markAsFilled(this)" required autocomplete="off">
-</div>
-<div class="form-group">
-<label for="cromatoPotassioNf">NOTA FISCAL DE ENTRADA</label>
-<input type="text" id="cromatoPotassioNf" name="cromatoPotassioNf" placeholder="NÚMERO DA NF DE ENTRADA"
-   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
-</div>
-</div></div>
-<!-- DICROMATO DE POTÁSSIO -->
-<div class="termo-responsabilidade"></p></p></p>
-<div class="form-group-container">
-<div class="form-group">
-<label for="dicromatoPotassioEntrada">DICROMATO DE POTÁSSIO ENTRADA</label>
-<input type="text" id="dicromatoPotassioEntrada" name="dicromatoPotassioEntrada" placeholder="VALOR DE ENTRADA"
-   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
-</div>
-<div class="form-group">
-<label for="dicromatoPotassioConsumo">DICROMATO DE POTÁSSIO CONSUMO</label>
-<input type="text" id="dicromatoPotassioConsumo" name="dicromatoPotassioConsumo" placeholder="VALOR DE CONSUMO"
-   oninput="validateNumber(this); markAsFilled(this)" required autocomplete="off">
-</div>
-<div class="form-group">
-<label for="dicromatoPotassioNf">NOTA FISCAL DE ENTRADA</label>
-<input type="text" id="dicromatoPotassioNf" name="dicromatoPotassioNf" placeholder="NÚMERO DA NF DE ENTRADA"
-   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
-</div>
-</div></div>
-<!-- HIDRÓXIDO DE AMÔNIO -->
-<div class="termo-responsabilidade"></p></p></p>
-<div class="form-group-container">
-<div class="form-group">
-<label for="hidroxidoAmonioEntrada">HIDRÓXIDO DE AMÔNIO ENTRADA</label>
-<input type="text" id="hidroxidoAmonioEntrada" name="hidroxidoAmonioEntrada" placeholder="VALOR DE ENTRADA"
-   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
-</div>
-<div class="form-group">
-<label for="hidroxidoAmonioConsumo">HIDRÓXIDO DE AMÔNIO CONSUMO</label>
-<input type="text" id="hidroxidoAmonioConsumo" name="hidroxidoAmonioConsumo" placeholder="VALOR DE CONSUMO"
-   oninput="validateNumber(this); markAsFilled(this)" required autocomplete="off">
-</div>
-<div class="form-group">
-<label for="hidroxidoAmmonioNf">NOTA FISCAL DE ENTRADA</label>
-<input type="text" id="hidroxidoAmmonioNf" name="hidroxidoAmmonioNf" placeholder="NÚMERO DA NF DE ENTRADA"
-   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
-</div>
-</div></div>
-<!-- HIDRÓXIDO DE POTÁSSIO -->
-<div class="termo-responsabilidade"></p></p></p>
-<div class="form-group-container">
-<div class="form-group">
-<label for="hidroxidoPotassioEntrada">HIDRÓXIDO DE POTÁSSIO ENTRADA</label>
-<input type="text" id="hidroxidoPotassioEntrada" name="hidroxidoPotassioEntrada" placeholder="VALOR DE ENTRADA"
-   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
-</div>
-<div class="form-group">
-<label for="hidroxidoPotassioConsumo">HIDRÓXIDO DE POTÁSSIO CONSUMO</label>
-<input type="text" id="hidroxidoPotassioConsumo" name="hidroxidoPotassioConsumo" placeholder="VALOR DE CONSUMO"
-   oninput="validateNumber(this); markAsFilled(this)" required autocomplete="off">
-</div>
-<div class="form-group">
-<label for="hidroxidoPotassioNf">NOTA FISCAL DE ENTRADA</label>
-<input type="text" id="hidroxidoPotassioNf" name="hidroxidoPotassioNf" placeholder="NÚMERO DA NF DE ENTRADA"
-   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
-</div>
-</div></div>
+		<!-- Botão para zerar movimentação -->
+		<div class="form-group-container">
+			<button type="button" class="form-button" onclick="zerarMovimentacao()">ZERAR MOVIMENTAÇÃO</button>
+		</div>
+        	<!-- DATA DO LANÇAMENTO -->
+			<input type="hidden" id="data" name="data">
+			<script>
+				 document.addEventListener("DOMContentLoaded", function() {
+				const opcoes = { day: 'numeric', month: 'long', year: 'numeric' };
+				const dataAtual = new Date().toLocaleDateString('pt-BR', opcoes);
+				document.getElementById("data").value = dataAtual;
+				 });
+			</script>
+			<!-- MÊS E ANO DE REFERÊNCIA -->
+			<div class="termo-responsabilidade"></p></p></p>
+				<div class="form-group-container">
+					<!-- Campo para selecionar o mês -->
+					<div class="form-group">
+						<label for="mesReferencia">MÊS DE REFERÊNCIA</label>
+						<select id="mesReferencia" name="mesReferencia" required onchange="markAsFilled(this)">
+							<option value="">SELECIONE O MÊS DE REFERÊNCIA</option>
+							<option value="JANEIRO">JANEIRO</option>
+							<option value="FEVEREIRO">FEVEREIRO</option>
+							<option value="MARÇO">MARÇO</option>
+							<option value="ABRIL">ABRIL</option>
+							<option value="MAIO">MAIO</option>
+							<option value="JUNHO">JUNHO</option>
+							<option value="JULHO">JULHO</option>
+							<option value="AGOSTO">AGOSTO</option>
+							<option value="SETEMBRO">SETEMBRO</option>
+							<option value="OUTUBRO">OUTUBRO</option>
+							<option value="NOVEMBRO">NOVEMBRO</option>
+							<option value="DEZEMBRO">DEZEMBRO</option>
+						</select>
+					</div>
+
+					<!-- Campo para selecionar o ano -->
+					<div class="form-group">
+						<label for="anoReferencia">ANO DE REFERÊNCIA</label>
+						<select id="anoReferencia" name="anoReferencia" required onchange="markAsFilled(this)">
+							<option value="">SELECIONE O ANO DE REFERÊNCIA</option>
+							<option value="2025">2025</option>
+							<option value="2026">2026</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+			<!-- ACETONA -->
+			<div class="termo-responsabilidade"></p></p></p>
+				<div class="form-group-container">
+					<div class="form-group">
+						<label for="acetonaEntrada">ACETONA ENTRADA</label>
+						<input type="text" id="acetonaEntrada" name="acetonaEntrada" placeholder="VALOR DE ENTRADA" 
+							   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
+					</div>
+
+					<div class="form-group">
+						<label for="acetonaConsumo">ACETONA CONSUMO</label>
+						<input type="text" id="acetonaConsumo" name="acetonaConsumo" placeholder="VALOR DE CONSUMO" 
+							   oninput="validateNumber(this); markAsFilled(this)" required autocomplete="off">
+					</div>
+
+					<div class="form-group">
+						<label for="acetonaNf">NOTA FISCAL DE ENTRADA</label>
+						<input type="text" id="acetonaNf" name="acetonaNf" placeholder="NÚMERO DA NF DE ENTRADA" 
+							   oninput="validateNumber(this); markAsFilled(this)"  autocomplete="off">
+					</div>
+				</div>				
+				</p>
+			</div>		
+			<!-- Campos do formulário -->
+			<input type="hidden" id="data" name="data">
+			<script>
+				 document.addEventListener("DOMContentLoaded", function() {
+				const opcoes = { day: 'numeric', month: 'long', year: 'numeric' };
+				const dataAtual = new Date().toLocaleDateString('pt-BR', opcoes);
+				document.getElementById("data").value = dataAtual;
+				 });
+			</script>
+
+			
+
+
+			<!-- ÁCIDO ACÉTICO -->
+			        <div class="termo-responsabilidade">
+         
+				</p></p></p>
+			<div class="form-group-container">
+				<div class="form-group">
+					<label for="acidoAceticoEntrada">ÁCIDO ACÉTICO ENTRADA</label>
+					<input type="text" id="acidoAceticoEntrada" name="acidoAceticoEntrada" placeholder="VALOR DE ENTRADA" 
+						   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
+				</div>
+
+				<div class="form-group">
+					<label for="acidoAceticoConsumo">ÁCIDO ACÉTICO CONSUMO</label>
+					<input type="text" id="acidoAceticoConsumo" name="acidoAceticoConsumo" placeholder="VALOR DE CONSUMO" 
+						   oninput="validateNumber(this); markAsFilled(this)" required autocomplete="off">
+				</div>
+
+				<div class="form-group">
+					<label for="acidoAceticoNf">NOTA FISCAL DE ENTRADA</label>
+					<input type="text" id="acidoAceticoNf" name="acidoAceticoNf" placeholder="NÚMERO DA NF DE ENTRADA" 
+						   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
+				</div>
+			</div>
+			</div>
+			<!-- ÁCIDO CLORÍDRICO -->
+			<div class="termo-responsabilidade"></p></p></p>
+			<div class="form-group-container">
+				<div class="form-group">
+					<label for="acidoCloridricoEntrada">ÁCIDO CLORÍDRICO ENTRADA</label>
+					<input type="text" id="acidoCloridricoEntrada" name="acidoCloridricoEntrada" placeholder="VALOR DE ENTRADA" 
+						   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
+				</div>
+
+				<div class="form-group">
+					<label for="acidoCloridricoConsumo">ÁCIDO CLORÍDRICO CONSUMO</label>
+					<input type="text" id="acidoCloridricoConsumo" name="acidoCloridricoConsumo" placeholder="VALOR DE CONSUMO" 
+						   oninput="validateNumber(this); markAsFilled(this)" required autocomplete="off">
+				</div>
+
+				<div class="form-group">
+					<label for="acidoCloridricoNf">NOTA FISCAL DE ENTRADA</label>
+					<input type="text" id="acidoCloridricoNf" name="acidoCloridricoNf" placeholder="NÚMERO DA NF DE ENTRADA" 
+						   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
+				</div>
+			</div>
+			</div>
+			<!-- ÁCIDO SULFÚRICO -->
+			<div class="termo-responsabilidade"></p></p></p>
+			<div class="form-group-container">
+				<div class="form-group">
+					<label for="acidoSulfuricoEntrada">ÁCIDO SULFÚRICO ENTRADA</label>
+					<input type="text" id="acidoSulfuricoEntrada" name="acidoSulfuricoEntrada" placeholder="VALOR DE ENTRADA" 
+						   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
+				</div>
+
+				<div class="form-group">
+					<label for="acidoSulfuricoConsumo">ÁCIDO SULFÚRICO CONSUMO</label>
+					<input type="text" id="acidoSulfuricoConsumo" name="acidoSulfuricoConsumo" placeholder="VALOR DE CONSUMO" 
+						   oninput="validateNumber(this); markAsFilled(this)" required autocomplete="off">
+				</div>
+
+				<div class="form-group">
+					<label for="acidoSulfuricoNf">NOTA FISCAL DE ENTRADA</label>
+					<input type="text" id="acidoSulfuricoNf" name="acidoSulfuricoNf" placeholder="NÚMERO DA NF DE ENTRADA" 
+						   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
+				</div>
+			</div></div>
+			<!-- CLORETO DE AMÔNIO -->
+			<div class="termo-responsabilidade"></p></p></p>
+			<div class="form-group-container">
+				<div class="form-group">
+					<label for="cloretoAmonioEntrada">CLORETO DE AMÔNIO ENTRADA</label>
+					<input type="text" id="cloretoAmonioEntrada" name="cloretoAmonioEntrada" placeholder="VALOR DE ENTRADA" 
+						   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
+				</div>
+
+				<div class="form-group">
+					<label for="cloretoAmonioConsumo">CLORETO DE AMÔNIO CONSUMO</label>
+					<input type="text" id="cloretoAmonioConsumo" name="cloretoAmonioConsumo" placeholder="VALOR DE CONSUMO" 
+						   oninput="validateNumber(this); markAsFilled(this)" required autocomplete="off">
+				</div>
+
+				<div class="form-group">
+					<label for="cloretoAmmonioNf">NOTA FISCAL DE ENTRADA</label>
+					<input type="text" id="cloretoAmonioNf" name="cloretoAmonioNf" placeholder="NÚMERO DA NF DE ENTRADA" 
+						   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
+				</div>
+			</div></div>
+			<!-- CROMATO DE POTÁSSIO -->
+			<div class="termo-responsabilidade"></p></p></p>
+			<div class="form-group-container">
+				<div class="form-group">
+					<label for="cromatoPotassioEntrada">CROMATO DE POTÁSSIO ENTRADA</label>
+					<input type="text" id="cromatoPotassioEntrada" name="cromatoPotassioEntrada" placeholder="VALOR DE ENTRADA" 
+						   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
+				</div>
+
+				<div class="form-group">
+					<label for="cromatoPotassioConsumo">CROMATO DE POTÁSSIO CONSUMO</label>
+					<input type="text" id="cromatoPotassioConsumo" name="cromatoPotassioConsumo" placeholder="VALOR DE CONSUMO" 
+						   oninput="validateNumber(this); markAsFilled(this)" required autocomplete="off">
+				</div>
+
+				<div class="form-group">
+					<label for="cromatoPotassioNf">NOTA FISCAL DE ENTRADA</label>
+					<input type="text" id="cromatoPotassioNf" name="cromatoPotassioNf" placeholder="NÚMERO DA NF DE ENTRADA" 
+						   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
+				</div>
+			</div></div>
+			<!-- DICROMATO DE POTÁSSIO -->
+			<div class="termo-responsabilidade"></p></p></p>
+			<div class="form-group-container">
+				<div class="form-group">
+					<label for="dicromatoPotassioEntrada">DICROMATO DE POTÁSSIO ENTRADA</label>
+					<input type="text" id="dicromatoPotassioEntrada" name="dicromatoPotassioEntrada" placeholder="VALOR DE ENTRADA" 
+						   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
+				</div>
+
+				<div class="form-group">
+					<label for="dicromatoPotassioConsumo">DICROMATO DE POTÁSSIO CONSUMO</label>
+					<input type="text" id="dicromatoPotassioConsumo" name="dicromatoPotassioConsumo" placeholder="VALOR DE CONSUMO" 
+						   oninput="validateNumber(this); markAsFilled(this)" required autocomplete="off">
+				</div>
+
+				<div class="form-group">
+					<label for="dicromatoPotassioNf">NOTA FISCAL DE ENTRADA</label>
+					<input type="text" id="dicromatoPotassioNf" name="dicromatoPotassioNf" placeholder="NÚMERO DA NF DE ENTRADA" 
+						   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
+				</div>
+			</div></div>
+			<!-- HIDRÓXIDO DE AMÔNIO -->
+			<div class="termo-responsabilidade"></p></p></p>
+			<div class="form-group-container">
+				<div class="form-group">
+					<label for="hidroxidoAmonioEntrada">HIDRÓXIDO DE AMÔNIO ENTRADA</label>
+					<input type="text" id="hidroxidoAmonioEntrada" name="hidroxidoAmonioEntrada" placeholder="VALOR DE ENTRADA" 
+						   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
+				</div>
+
+				<div class="form-group">
+					<label for="hidroxidoAmonioConsumo">HIDRÓXIDO DE AMÔNIO CONSUMO</label>
+					<input type="text" id="hidroxidoAmonioConsumo" name="hidroxidoAmonioConsumo" placeholder="VALOR DE CONSUMO" 
+						   oninput="validateNumber(this); markAsFilled(this)" required autocomplete="off">
+				</div>
+
+				<div class="form-group">
+					<label for="hidroxidoAmmonioNf">NOTA FISCAL DE ENTRADA</label>
+					<input type="text" id="hidroxidoAmmonioNf" name="hidroxidoAmmonioNf" placeholder="NÚMERO DA NF DE ENTRADA" 
+						   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
+				</div>
+			</div></div>
+			<!-- HIDRÓXIDO DE POTÁSSIO -->
+			<div class="termo-responsabilidade"></p></p></p>
+			<div class="form-group-container">
+				<div class="form-group">
+					<label for="hidroxidoPotassioEntrada">HIDRÓXIDO DE POTÁSSIO ENTRADA</label>
+					<input type="text" id="hidroxidoPotassioEntrada" name="hidroxidoPotassioEntrada" placeholder="VALOR DE ENTRADA" 
+						   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
+				</div>
+
+				<div class="form-group">
+					<label for="hidroxidoPotassioConsumo">HIDRÓXIDO DE POTÁSSIO CONSUMO</label>
+					<input type="text" id="hidroxidoPotassioConsumo" name="hidroxidoPotassioConsumo" placeholder="VALOR DE CONSUMO" 
+						   oninput="validateNumber(this); markAsFilled(this)" required autocomplete="off">
+				</div>
+
+				<div class="form-group">
+					<label for="hidroxidoPotassioNf">NOTA FISCAL DE ENTRADA</label>
+					<input type="text" id="hidroxidoPotassioNf" name="hidroxidoPotassioNf" placeholder="NÚMERO DA NF DE ENTRADA" 
+						   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
+				</div>
+			</div></div>
+
             <div class="form-group">
-<div class="termo-responsabilidade"></p>
+			<div class="termo-responsabilidade"></p>
                 <label for="nfEntrada">NOTA FISCAL DE ENTRADA</label>
                 <input type="file" id="nfEntrada" name="nfEntrada" accept="application/pdf" onchange="markAsFilled(this)" >
             </div>
              <button type="submit" class="form-button">Enviar</button>
-</form>
-</div></div>
+				</form>
+			</div></div>
+
     <script>
+	
+	
+
+
+
+
+		
+		
+		
+		
 const scriptURL = "https://script.google.com/macros/s/AKfycbw5tQLblr04TOldrWgH84xKFQ9dP4os7t3_Tq6sEtojFiu7o9GUhOQ-Ymja8Xu_xcUt/exec";
 const form = document.forms["Lab01"];
+
 // Função para formatar data para o padrão brasileiro (DD/MM/AAAA)
 function formatarDataBrasileira(data) {
     if (!data) return data;
     const [ano, mes, dia] = data.split('-');
     return `${dia.padStart(2, '0')}/${mes.padStart(2, '0')}/${ano}`;
 }
+
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const formData = new FormData(form);
+
     // Função para ler arquivos como Base64
     async function readFileAsBase64(file) {
         return new Promise((resolve, reject) => {
@@ -484,22 +579,29 @@ form.addEventListener("submit", async (e) => {
             reader.readAsDataURL(file);
         });
     }
+
     // Validar os arquivos antes de enviar
     const fileInputs = ["nfEntrada"];
     let hasInvalidFile = false;
+
     fileInputs.forEach(inputId => {
         const file = document.getElementById(inputId).files[0];
         if (file && file.type !== "application/pdf") {
-            alert`O arquivo em ${inputId} deve ser um PDF.`);
+            alert(`O arquivo em ${inputId} deve ser um PDF.`);
             hasInvalidFile = true;
         }
     });
+
     if (hasInvalidFile) return;
+
     try {
         // Ler os arquivos PDF como Base64
         const nfEntradaBase64 = document.getElementById("nfEntrada").files[0] ? await readFileAsBase64(document.getElementById("nfEntrada").files[0]) : null;
+
+
         // Converter FormData para objeto e tratar os dados
         const dados = Object.fromEntries(formData.entries());
+
         // Converter campos de texto para maiúsculas (exceto datas)
         Object.keys(dados).forEach(key => {
             if (typeof dados[key] === 'string') {
@@ -511,16 +613,20 @@ form.addEventListener("submit", async (e) => {
                 }
             }
         });
+
         // Adicionar os arquivos ao objeto de dados
         const data = {
             ...dados,
-data: new Date().toLocaleDateString('pt-BR'), // Data atual no formato DD/MM/AAAA
+			data: new Date().toLocaleDateString('pt-BR'), // Data atual no formato DD/MM/AAAA
             nfEntrada: nfEntradaBase64,
+           
         };
+
         // Enviar os dados para o Google Apps Script
         const submitButton = document.querySelector("button[type='submit']");
         submitButton.disabled = true;
         submitButton.innerText = "Enviando formulário. Aguarde...";
+
         await fetch(scriptURL, {
             method: "POST",
             body: JSON.stringify(data),
@@ -529,9 +635,11 @@ data: new Date().toLocaleDateString('pt-BR'), // Data atual no formato DD/MM/AAA
             },
             mode: "no-cors",
         });
+
         // Sem mensagem após o envio, apenas limpar o formulário
         form.reset();
         form.querySelectorAll('.filled').forEach(input => input.classList.remove('filled'));
+
     } catch (error) {
         alert("Erro: " + error.message);
         console.error("Erro detalhado:", error);
@@ -541,36 +649,73 @@ data: new Date().toLocaleDateString('pt-BR'), // Data atual no formato DD/MM/AAA
         submitButton.innerText = "Enviar";
     }
 });
-// Função para marcar o campo como preenchido (mudar a cor)
-function markAsFilled(input) {
-if (input.value.trim() !== "") {
-input.classList.add("filled");
-} else {
-input.classList.remove("filled");
-}
-}
+	
+	
+
+
+
+
+
+	
+
+
+		// Função para marcar o campo como preenchido (mudar a cor)
+		function markAsFilled(input) {
+			if (input.value.trim() !== "") {
+				input.classList.add("filled");
+			} else {
+				input.classList.remove("filled");
+			}
+		}
+
+
+
+
+
+
+
 // Função para zerar os campos de CONSUMO e ENTRADA
 function zerarMovimentacao() {
     // Seleciona todos os campos de CONSUMO
     const camposConsumo = document.querySelectorAll('input[id$="Consumo"]');
+
     // Preenche cada campo de CONSUMO com "0"
     camposConsumo.forEach(campo => {
         campo.value = "0";
         markAsFilled(campo); // Marca o campo como preenchido
     });
+
     // Seleciona todos os campos de ENTRADA
     const camposEntrada = document.querySelectorAll('input[id$="Entrada"]');
+
     // Preenche cada campo de ENTRADA com "0"
     camposEntrada.forEach(campo => {
         campo.value = "0";
         markAsFilled(campo); // Marca o campo como preenchido
     });
 }
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
     // Função para validar números
     function validateNumber(input) {
         // Remove qualquer caractere que não seja número
         input.value = input.value.replace(/[^0-9]/g, '');
     }
+
     // Função para marcar o campo como preenchido (se necessário)
     function markAsFilled(input) {
         if (input.value.trim() !== "") {
@@ -579,7 +724,11 @@ function zerarMovimentacao() {
             input.classList.remove("filled");
         }
     }
-function validarData(input) {
+
+	
+		
+		
+	function validarData(input) {
     const valor = input.value;
     const regex = /^\d{2}\/\d{2}\/\d{4}$/;
     if (!regex.test(valor)) {
@@ -587,12 +736,17 @@ function validarData(input) {
         input.value = "";
     }
 }
-function validateNumber(input) {
-// Remove qualquer caractere que não seja número
-input.value = input.value.replace(/[^0-9]/g, '');
-// Chama a função markAsFilled (se necessário)
-markAsFilled(input);
-}
+		
+		function validateNumber(input) {
+			// Remove qualquer caractere que não seja número
+			input.value = input.value.replace(/[^0-9]/g, '');
+
+			// Chama a função markAsFilled (se necessário)
+			markAsFilled(input);
+		}		
+		
+		
     </script>
 </body>
 </html>
+
