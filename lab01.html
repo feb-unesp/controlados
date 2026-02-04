@@ -318,11 +318,8 @@
 					<!-- Campo para selecionar o ano -->
 					<div class="form-group">
 						<label for="anoReferencia">ANO DE REFERÊNCIA</label>
-						<select id="anoReferencia" name="anoReferencia" required onchange="markAsFilled(this)">
-							<option value="">SELECIONE O ANO DE REFERÊNCIA</option>
-							<option value="2025">2025</option>
-							<option value="2026">2026</option>
-						</select>
+						<input type="text" id="anoReferencia" name="anoReferencia" placeholder="ANO DE REFERÊNCIA" 
+							   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
 					</div>
 				</div>
 			</div>
