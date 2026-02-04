@@ -316,13 +316,10 @@
 					</div>
 
 					<!-- Campo para selecionar o ano -->
-					<div class="form-group">
+						<div class="form-group">
 						<label for="anoReferencia">ANO DE REFERÊNCIA</label>
-						<select id="anoReferencia" name="anoReferencia" required onchange="markAsFilled(this)">
-							<option value="">SELECIONE O ANO DE REFERÊNCIA</option>
-							<option value="2025">2025</option>
-							<option value="2026">2026</option>
-						</select>
+						<input type="text" id="anoReferencia" name="anoReferencia" placeholder="ANO DE REFERÊNCIA" 
+							   oninput="validateNumber(this); markAsFilled(this)" autocomplete="off">
 					</div>
 				</div>
 			</div>
@@ -482,7 +479,7 @@
 		
 		
 		
-const scriptURL = "https://script.google.com/macros/s/AKfycbzzJXlc5xucpQYw3M7e667B3bCktaispnjDSYqLIlrNhT41atRxifoEi_YQmzmzN-m5/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycbwDfV6YPOkIOY4h_ZCYSe4m4lhFpDlZ9TyjL0MGdgvPbhRbN2OsCIZyKKNN2_baN2eP/exec";
 const form = document.forms["Lab05"];
 
 // Função para formatar data para o padrão brasileiro (DD/MM/AAAA)
@@ -675,5 +672,4 @@ function zerarMovimentacao() {
     </script>
 </body>
 </html>
-
 
